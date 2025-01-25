@@ -9,5 +9,7 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-  "files": []
+  "files": [],
+  "include": ["src/**/*", "src/**/*.vue", "vite.config.ts"], // 指定被编译文件所在的目录
+  "exclude": ["node_modules", "dist", "**/*.js"] // 指定不需要被编译的目录
 }

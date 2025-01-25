@@ -19,9 +19,5 @@
     "isolatedModules": true,
     "skipLibCheck": true,
     "noUncheckedSideEffectImports": true
-  },
-  "include": [
-    "vite.config.ts",
-    "src/icons/svg/*.svg"
-  ]
+  }
 }
