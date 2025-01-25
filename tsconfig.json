@@ -3,7 +3,8 @@
     "baseUrl": ".", // 解析非相对模块的基地址，默认是当前目录
     "paths": { // 路径映射，相对于baseUrl
       "@/*": ["src/*"]
-    }
+    },
+    "lib": ["ES2020", "DOM"], // 指定要包含在编译中的库文件
   },
   "references": [
     { "path": "./tsconfig.app.json" },

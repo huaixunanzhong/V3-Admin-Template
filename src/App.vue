@@ -1,9 +1,9 @@
-<script setup lang="ts"></script>
-
 <template>
-  <div>
-    <SvgIcon name="direct" />
-  </div>
+  <el-config-provider>
+    <router-view></router-view>
+  </el-config-provider>
 </template>
+
+<script setup lang="ts"></script>
 
 <style scoped></style>

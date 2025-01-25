@@ -10,7 +10,7 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), {
   width: '1em',
   height: '1em',
-  prefix: 'icon',
+  prefix: 'icon'
 })
 
 const symbolId = computed(() => `#${props.prefix}-${props.name}`)
