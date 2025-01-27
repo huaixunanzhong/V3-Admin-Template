@@ -1,15 +1,15 @@
 {
   "compilerOptions": {
-    "baseUrl": ".", // 解析非相对模块的基地址，默认是当前目录
+    "module": "es2020", // 或 es2022, esnext, system, node16, nodenext
+    "target": "es2020", // 目标 JavaScript 版本
+    "moduleResolution": "node", // 模块解析策略
+    "esModuleInterop": true, // 启用 ES 模块互操作性
+    "baseUrl": "./", // 解析非相对模块的基地址，默认是当前目录
     "paths": { // 路径映射，相对于baseUrl
       "@/*": ["src/*"]
     },
     "lib": ["ES2020", "DOM"], // 指定要包含在编译中的库文件
   },
-  "references": [
-    { "path": "./tsconfig.app.json" },
-    { "path": "./tsconfig.node.json" }
-  ],
   "files": [],
   "include": ["src/**/*", "src/**/*.vue", "vite.config.ts"], // 指定被编译文件所在的目录
   "exclude": ["node_modules", "dist", "**/*.js"] // 指定不需要被编译的目录

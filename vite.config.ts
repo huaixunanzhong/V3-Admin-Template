@@ -15,7 +15,10 @@ export default defineConfig(({ mode }) => {
     plugins: [
       vue(),
       AutoImport({
-        resolvers: [ElementPlusResolver()]
+        resolvers: [ElementPlusResolver()],
+        // 自动导入vue相关函数，如: ref、reactive、toRef等
+        imports: ['vue', 'vue-router'],
+        dts: 'src/auto-import.d.ts'
       }),
       Components({
         resolvers: [ElementPlusResolver()]

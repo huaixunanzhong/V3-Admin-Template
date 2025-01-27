@@ -1,9 +1,9 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-
+import { setupRouterGuard } from './permission'
 /** 默认布局 */
 const Layout = () => import('@/layout/index.vue')
 
-const constantRoutes: RouteRecordRaw[] = [
+export const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/redirect',
     component: Layout,
@@ -33,7 +33,7 @@ const constantRoutes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'Home',
-    component: () => import('@/views/home/index.vue'),
+    component: Layout,
     redirect: '/home',
     meta: { hidden: false },
     children: [
@@ -60,7 +60,7 @@ const router = createRouter({
   scrollBehavior: () => ({ left: 0, top: 0 })
 })
 
-// setupRouterGuard(router)
+setupRouterGuard(router)
 
 /**
  * @description 重置路由
